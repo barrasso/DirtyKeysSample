@@ -13,6 +13,8 @@
 		04ACE72E1A6720C700E0BBB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04ACE72D1A6720C700E0BBB5 /* Images.xcassets */; };
 		04ACE7311A6720C700E0BBB5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ACE72F1A6720C700E0BBB5 /* LaunchScreen.xib */; };
 		04ACE73D1A6720C700E0BBB5 /* DirtyKeysSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ACE73C1A6720C700E0BBB5 /* DirtyKeysSampleTests.swift */; };
+		04ACE74F1A67212C00E0BBB5 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ACE74E1A67212C00E0BBB5 /* KeyboardViewController.swift */; };
+		04ACE7521A67212C00E0BBB5 /* DirtyKeys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04ACE74A1A67212C00E0BBB5 /* DirtyKeys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +25,28 @@
 			remoteGlobalIDString = 04ACE7201A6720C700E0BBB5;
 			remoteInfo = DirtyKeysSample;
 		};
+		04ACE7501A67212C00E0BBB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04ACE7191A6720C700E0BBB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04ACE7491A67212C00E0BBB5;
+			remoteInfo = DirtyKeys;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04ACE7561A67212C00E0BBB5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				04ACE7521A67212C00E0BBB5 /* DirtyKeys.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		04ACE7211A6720C700E0BBB5 /* DirtyKeysSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirtyKeysSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +59,9 @@
 		04ACE7361A6720C700E0BBB5 /* DirtyKeysSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirtyKeysSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04ACE73B1A6720C700E0BBB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04ACE73C1A6720C700E0BBB5 /* DirtyKeysSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirtyKeysSampleTests.swift; sourceTree = "<group>"; };
+		04ACE74A1A67212C00E0BBB5 /* DirtyKeys.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DirtyKeys.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		04ACE74D1A67212C00E0BBB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04ACE74E1A67212C00E0BBB5 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +79,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04ACE7471A67212C00E0BBB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +94,7 @@
 			children = (
 				04ACE7231A6720C700E0BBB5 /* DirtyKeysSample */,
 				04ACE7391A6720C700E0BBB5 /* DirtyKeysSampleTests */,
+				04ACE74B1A67212C00E0BBB5 /* DirtyKeys */,
 				04ACE7221A6720C700E0BBB5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +104,7 @@
 			children = (
 				04ACE7211A6720C700E0BBB5 /* DirtyKeysSample.app */,
 				04ACE7361A6720C700E0BBB5 /* DirtyKeysSampleTests.xctest */,
+				04ACE74A1A67212C00E0BBB5 /* DirtyKeys.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +147,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		04ACE74B1A67212C00E0BBB5 /* DirtyKeys */ = {
+			isa = PBXGroup;
+			children = (
+				04ACE74E1A67212C00E0BBB5 /* KeyboardViewController.swift */,
+				04ACE74C1A67212C00E0BBB5 /* Supporting Files */,
+			);
+			path = DirtyKeys;
+			sourceTree = "<group>";
+		};
+		04ACE74C1A67212C00E0BBB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04ACE74D1A67212C00E0BBB5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +174,12 @@
 				04ACE71D1A6720C700E0BBB5 /* Sources */,
 				04ACE71E1A6720C700E0BBB5 /* Frameworks */,
 				04ACE71F1A6720C700E0BBB5 /* Resources */,
+				04ACE7561A67212C00E0BBB5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				04ACE7511A67212C00E0BBB5 /* PBXTargetDependency */,
 			);
 			name = DirtyKeysSample;
 			productName = DirtyKeysSample;
@@ -150,6 +204,23 @@
 			productReference = 04ACE7361A6720C700E0BBB5 /* DirtyKeysSampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		04ACE7491A67212C00E0BBB5 /* DirtyKeys */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04ACE7531A67212C00E0BBB5 /* Build configuration list for PBXNativeTarget "DirtyKeys" */;
+			buildPhases = (
+				04ACE7461A67212C00E0BBB5 /* Sources */,
+				04ACE7471A67212C00E0BBB5 /* Frameworks */,
+				04ACE7481A67212C00E0BBB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DirtyKeys;
+			productName = DirtyKeys;
+			productReference = 04ACE74A1A67212C00E0BBB5 /* DirtyKeys.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +236,9 @@
 					04ACE7351A6720C700E0BBB5 = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 04ACE7201A6720C700E0BBB5;
+					};
+					04ACE7491A67212C00E0BBB5 = {
+						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
 			};
@@ -183,6 +257,7 @@
 			targets = (
 				04ACE7201A6720C700E0BBB5 /* DirtyKeysSample */,
 				04ACE7351A6720C700E0BBB5 /* DirtyKeysSampleTests */,
+				04ACE7491A67212C00E0BBB5 /* DirtyKeys */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +274,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		04ACE7341A6720C700E0BBB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ACE7481A67212C00E0BBB5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -225,6 +307,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04ACE7461A67212C00E0BBB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ACE74F1A67212C00E0BBB5 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +322,11 @@
 			isa = PBXTargetDependency;
 			target = 04ACE7201A6720C700E0BBB5 /* DirtyKeysSample */;
 			targetProxy = 04ACE7371A6720C700E0BBB5 /* PBXContainerItemProxy */;
+		};
+		04ACE7511A67212C00E0BBB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04ACE7491A67212C00E0BBB5 /* DirtyKeys */;
+			targetProxy = 04ACE7501A67212C00E0BBB5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -336,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DirtyKeysSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DirtyKeysSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -386,6 +483,30 @@
 			};
 			name = Release;
 		};
+		04ACE7541A67212C00E0BBB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DirtyKeys/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		04ACE7551A67212C00E0BBB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DirtyKeys/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -411,6 +532,14 @@
 			buildConfigurations = (
 				04ACE7441A6720C700E0BBB5 /* Debug */,
 				04ACE7451A6720C700E0BBB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		04ACE7531A67212C00E0BBB5 /* Build configuration list for PBXNativeTarget "DirtyKeys" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04ACE7541A67212C00E0BBB5 /* Debug */,
+				04ACE7551A67212C00E0BBB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
