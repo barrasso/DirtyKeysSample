@@ -10,43 +10,57 @@ import UIKit
 
 class KeyboardViewController: UIInputViewController {
 
+    var dirtyKeysView: UIView!
+    
     @IBOutlet var nextKeyboardButton: UIButton!
-
-    override func updateViewConstraints() {
+    
+    override func updateViewConstraints()
+    {
         super.updateViewConstraints()
     
         // Add custom view sizing constraints here
     }
 
-    override func viewDidLoad() {
+    // MARK: View Initialization
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
     
-        // Perform custom UI setup here
-        self.nextKeyboardButton = UIButton.buttonWithType(.System) as UIButton
-    
-        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
-        self.nextKeyboardButton.sizeToFit()
-        self.nextKeyboardButton.setTranslatesAutoresizingMaskIntoConstraints(false)
-    
-        self.nextKeyboardButton.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside)
-        
-        self.view.addSubview(self.nextKeyboardButton)
-    
-        var nextKeyboardButtonLeftSideConstraint = NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0.0)
-        var nextKeyboardButtonBottomConstraint = NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: 0.0)
-        self.view.addConstraints([nextKeyboardButtonLeftSideConstraint, nextKeyboardButtonBottomConstraint])
+        // load dirty key interface
+        loadInterface()
     }
 
-    override func didReceiveMemoryWarning() {
+    func loadInterface()
+    {
+        // load nib file
+        var dirtyKeysNib = UINib(nibName: "DirtyKeys", bundle: nil)
+        
+        // instantiate view
+        dirtyKeysView = dirtyKeysNib.instantiateWithOwner(self, options: nil)[0] as UIView
+        
+        // add interface to main view
+        view.addSubview(dirtyKeysView)
+        
+        // This will make the button call advanceToNextInputMode() when tapped
+        nextKeyboardButton.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside)
+    }
+    
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated
     }
+    
+    // MARK: Text Input Functions
 
-    override func textWillChange(textInput: UITextInput) {
+    override func textWillChange(textInput: UITextInput)
+    {
         // The app is about to change the document's contents. Perform any preparation here.
     }
 
-    override func textDidChange(textInput: UITextInput) {
+    override func textDidChange(textInput: UITextInput)
+    {
         // The app has just changed the document's contents, the document context has been updated.
     
         var textColor: UIColor
@@ -56,7 +70,5 @@ class KeyboardViewController: UIInputViewController {
         } else {
             textColor = UIColor.blackColor()
         }
-        self.nextKeyboardButton.setTitleColor(textColor, forState: .Normal)
     }
-
 }

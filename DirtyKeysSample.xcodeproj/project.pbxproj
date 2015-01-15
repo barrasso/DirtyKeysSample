@@ -15,6 +15,7 @@
 		04ACE73D1A6720C700E0BBB5 /* DirtyKeysSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ACE73C1A6720C700E0BBB5 /* DirtyKeysSampleTests.swift */; };
 		04ACE74F1A67212C00E0BBB5 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ACE74E1A67212C00E0BBB5 /* KeyboardViewController.swift */; };
 		04ACE7521A67212C00E0BBB5 /* DirtyKeys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04ACE74A1A67212C00E0BBB5 /* DirtyKeys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		04ACE7581A67258000E0BBB5 /* DirtyKeys.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ACE7571A67258000E0BBB5 /* DirtyKeys.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		04ACE74A1A67212C00E0BBB5 /* DirtyKeys.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DirtyKeys.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		04ACE74D1A67212C00E0BBB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04ACE74E1A67212C00E0BBB5 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		04ACE7571A67258000E0BBB5 /* DirtyKeys.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirtyKeys.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				04ACE74E1A67212C00E0BBB5 /* KeyboardViewController.swift */,
+				04ACE7571A67258000E0BBB5 /* DirtyKeys.xib */,
 				04ACE74C1A67212C00E0BBB5 /* Supporting Files */,
 			);
 			path = DirtyKeys;
@@ -284,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04ACE7581A67258000E0BBB5 /* DirtyKeys.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
